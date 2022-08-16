@@ -13,8 +13,9 @@ export function useObserver(view) {
     const trackerRef = useRef(null)
     // 只初始化一次，ref在组件的整个生命周期内都有效
     if(!trackerRef.current) {
+        // 传一个scheduler函数挂载到Tracker实例上（其实就是forceUpdate），执行对应reaction时取出来执行scheduler
         trackerRef.current  = new Tracker(() => {
-            forceUpdate()
+            forceUpdate()  
         })
     }
     useEffect(() => {
