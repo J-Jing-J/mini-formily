@@ -1,25 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactivePage from "./pages/ReactivePage";
 
-function App() {
+// 组件什么情况下会更新：forceUpdate/setState/Context变化/父组件的props改变
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ReactivePage />
     </div>
   );
 }
-
-export default App;

@@ -3,6 +3,8 @@ import {observer, FieldContext} from "@/which";
 import {FormContext} from "./context";
 
 // 组件层的Field
+// Field组件：上面有value， --- 每一项的值，在form表单上和Field上都存了
+
 // observer 用mobx实现，实现响应式--每次自动渲染
 const Field = observer((props) => {
     // 拿到表单
